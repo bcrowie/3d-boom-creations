@@ -2,9 +2,8 @@
 @import '../mixins.scss';
 
 .Header {
-    width: 100%;
-    height: 100px;
     @include container;
+    height: 100px;
     background-color: green;
 }
 
