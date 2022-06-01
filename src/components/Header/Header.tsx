@@ -1,9 +1,7 @@
+import '../../styles/Components/Header.scss';
+
 const Header: React.FC = () => {
-    return (
-        <div>
-            <p>This is the site Header.</p>
-        </div>
-    );
+    return <div className='Header'></div>;
 };
 
 export default Header;

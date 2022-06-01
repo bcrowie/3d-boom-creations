@@ -1,0 +1,9 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.Home {
+    @include container;
+    background-color: aqua;
+    width: 1100px;
+    margin: 0;
+}

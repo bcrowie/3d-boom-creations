@@ -1,9 +1,5 @@
 const Home: React.FC = () => {
-    return (
-        <div>
-            <p>This is the home page</p>
-        </div>
-    );
+    return <div className='Home'></div>;
 };
 
 export default Home;
