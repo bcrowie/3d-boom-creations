@@ -1,8 +1,10 @@
+import "../../styles/Components/Header/Header.scss"
+
 const Logo: React.FC = () => {
     return (
-        <div>
-            <p>3DBoom</p>
-            <p>Creation</p>
+        <div id="logo">
+            <p className="logo">3DBoom</p>
+            <p className="logo">Creations</p>
         </div>
     );
 };

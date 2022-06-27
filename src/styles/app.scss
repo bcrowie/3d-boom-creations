@@ -1,10 +1,11 @@
 @import './mixins.scss';
 
 .App {
-    @include container;
+    @include font-style(1rem);
+
     top: 0;
     margin: auto;
-    border: red 1px solid;
+
 }
 
 // Media Queries

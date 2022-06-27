@@ -1,0 +1,18 @@
+@import "../../mixins.scss";
+@import "../../variables.scss";
+
+.header-link-container {
+
+    height: 50px;
+    width: 150px;
+
+
+    .header-link {
+        @include headerLink();
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-decoration: none;
+    }
+}
