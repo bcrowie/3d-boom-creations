@@ -1,7 +1,20 @@
 @import '../../variables.scss';
 @import '../../mixins.scss';
 
-.Footer {
-    @include container;
+.footer-main {
+    background-color: rgb(255, 145, 0);
+    margin-bottom: -20px;
     height: 200px;
+
+    .footer-border {
+        height: 6px;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(136,51,55,1) 35%, rgb(178, 101, 0) 75%, rgba(255,145,0,1) 100%);
+    }
+
+    .footer-menu {
+        @include container;
+
+        display: flex;
+    }
 }
