@@ -1,11 +1,14 @@
+import React from 'react'
+import logo from '../../assets/Logo.png'
 import { Link } from "react-router-dom";
 import "../../styles/Components/Header/Header.scss"
 
 const Logo: React.FC = () => {
     return (
         <div id="logo">
-            <Link to="/" className="logo">3DBoom</Link>
-            <Link to="/" className="logo">Creations</Link>
+            <Link to="/">
+                <img src={logo} alt="3D Boom Creations Logo" />
+            </Link>
         </div>
     );
 };

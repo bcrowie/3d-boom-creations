@@ -20,7 +20,7 @@
 @mixin linkHoverAnimation() {
     &:hover{
         color: rgb(253, 53, 52);
-        transition: all 400ms ease-in-out;
+        transition: all 200ms ease-in-out;
     }
 
 }
