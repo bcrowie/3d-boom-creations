@@ -3,6 +3,6 @@
 
 .home {
     @include container;
+    @include main;
 
-    background-color: aqua;
 }

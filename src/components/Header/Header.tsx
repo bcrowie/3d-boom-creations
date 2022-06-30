@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+
 import HeaderLink from './HeaderLink';
 import Logo from '../Logo/Logo';
 import { links } from '../../Constants/Constants.js'
@@ -18,12 +19,16 @@ const Header: React.FC = () => {
             <div id="header-contact-links">
                 <div className="contact-info">
                     <>
-                        <FontAwesomeIcon icon={solid('phone')} />
-                        <p style={{"color": "white"}} className="phone-number">Phone: (863) 606-8318</p>
+                        <p style={{"color": "white"}} className="phone-number">
+                        <FontAwesomeIcon icon={solid('phone')} className="icon"/>
+                        Phone: (863) 606-8318
+                        </p>
                     </>
                     <>
-                    <FontAwesomeIcon icon={solid('envelope')} />
-                    <Link to="#" onClick={sendMail} className="email-link">Email: service@3dboom.org</Link>
+                        <Link to="#" onClick={sendMail} className="email-link">
+                        <FontAwesomeIcon icon={solid('envelope')} className="icon phone" />
+                            Email: service@3dboom.org
+                        </Link>
                     </>
                 </div>
                 <div id="header-links">
@@ -36,6 +41,7 @@ const Header: React.FC = () => {
                 </div>
             </div>
         </div>
+        <div className="border"></div>
     </div>;
 };
 

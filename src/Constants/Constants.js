@@ -26,3 +26,5 @@ export const links = {
     }
 
 }
+
+export const logoAlt = "3D Boom Creations Logo"
