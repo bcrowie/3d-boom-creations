@@ -1,6 +1,8 @@
+import "../../styles/Pages/Work.scss"
+
 const Work: React.FC = () => {
     return (
-        <div className='Work'>
+        <div className='work'>
             <p>This is the page to show work.</p>
         </div>
     );

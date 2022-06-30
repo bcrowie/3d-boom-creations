@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import "../../styles/Components/Header/Header.scss"
 
 const Logo: React.FC = () => {
     return (
         <div id="logo">
-            <p className="logo">3DBoom</p>
-            <p className="logo">Creations</p>
+            <Link to="/" className="logo">3DBoom</Link>
+            <Link to="/" className="logo">Creations</Link>
         </div>
     );
 };

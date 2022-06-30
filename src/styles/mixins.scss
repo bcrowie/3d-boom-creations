@@ -12,11 +12,15 @@
 
 @mixin headerLink() {
     @include font-style(1.5rem);
-
+    @include linkHoverAnimation();
+    color: white;
     text-decoration: none;
+}
 
+@mixin linkHoverAnimation() {
     &:hover{
-        color: orangered;
+        color: rgb(253, 53, 52);
         transition: all 400ms ease-in-out;
     }
+
 }

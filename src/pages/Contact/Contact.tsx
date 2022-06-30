@@ -1,6 +1,8 @@
+import "../../styles/Pages/Contact.scss"
+
 const Contact: React.FC = () => {
     return (
-        <div>
+        <div className="contact">
             <p>This is the contact page.</p>
         </div>
     );
