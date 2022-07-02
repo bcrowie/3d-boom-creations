@@ -13,17 +13,22 @@
 @mixin headerLink() {
     @include font-style(1.5rem);
     @include linkHoverAnimation();
+
     color: white;
     text-decoration: none;
 }
 
 @mixin linkHoverAnimation() {
     &:hover{
-        color: rgb(253, 53, 52);
-
+        color: rgb(255, 239, 7);
         transition: all 200ms ease-in-out;
+        text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
     }
-
 }
 
 @mixin main() {

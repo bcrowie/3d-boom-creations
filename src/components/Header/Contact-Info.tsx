@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
+import * as constants from '../../constants/constants.js'
 import "../../styles/Components/Header/Header.scss"
 
 const sendMail = () => {
@@ -14,13 +15,13 @@ const ContactInfo: React.FC = () => {
         <>
             <p style={{"color": "white"}} className="phone-number">
                 <FontAwesomeIcon icon={solid('phone')} className="icon"/>
-                Phone: (863) 606-8318
+                {constants.headerPhone}
             </p>
         </>
         <>
             <Link to="#" onClick={sendMail} className="email-link">
-                <FontAwesomeIcon icon={solid('envelope')} className="icon phone" />
-                Email: service@3dboom.org
+                <FontAwesomeIcon icon={solid('envelope')} className="icon envelope" />
+                {constants.headerEmail}
             </Link>
         </>
         </div>
