@@ -3,7 +3,7 @@
 
 .footer-main {
     background-color: rgb(255, 145, 0);
-    margin-bottom: -20px;
+    bottom: 0;
     height: 200px;
 
     .footer-border {
@@ -14,7 +14,47 @@
 
     .footer-menu {
         @include container;
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        display: grid;
+        grid-template-columns: 15% 15% 15% 55%;
 
-        display: flex;
+        .footer-column-one {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            grid-column-start: 1;
+        }
+        .footer-column-two {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            grid-column-start: 2;
+        }
+        .footer-column-three {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            grid-column-start: 3;
+        }
+        .footer-column-four {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            .copyright {
+                color: white;
+                justify-content: center;
+                text-decoration: none;
+            }
+            .social {
+                a {
+                    padding: 0 20px 0 0;
+                }
+            }
+        }
     }
 }

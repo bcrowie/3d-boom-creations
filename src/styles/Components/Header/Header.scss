@@ -41,20 +41,19 @@
                     width: auto;
 
                     .icon {
-
-
                         color: white;
-                        padding-top: 1px;
-                        width: 50px;
+                        padding: 1px -5px 0 5px;
+                        width: 40px;
                     }
                 }
 
                 a {
                     @include linkHoverAnimation();
 
-                    .icon.phone {
+                    .icon.envelope {
                         @include linkHoverAnimation();
                     }
+
                     color: white;
                     text-decoration: none;
                 }
@@ -66,10 +65,9 @@
                 flex-direction: row;
                 justify-content: flex-end;
                 padding: 5px;
-                height: 30px;
+                height: 10px;
             }
         }
-
     }
 
     .header-border {

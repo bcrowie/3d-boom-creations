@@ -1,3 +1,8 @@
+// Header
+export const headerPhone = "Phone: (863) 606-8318"
+export const headerEmail = "Email: contact@3dboom.org"
+export const logoAlt = "3D Boom Creations Logo"
+
 // Links
 export const links = {
     about: {
@@ -12,6 +17,10 @@ export const links = {
         link: "/",
         text: "Home"
     },
+    products: {
+        link: "/products",
+        text: "Products"
+    },
     quotes: {
         link: "/quotes",
         text: "Quotes"
@@ -20,11 +29,4 @@ export const links = {
         link: "/testimonials",
         text: "Testimonials"
     },
-    work: {
-        link: "/work",
-        text: "Work"
-    }
-
 }
-
-export const logoAlt = "3D Boom Creations Logo"
