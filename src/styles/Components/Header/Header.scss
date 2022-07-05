@@ -48,10 +48,10 @@
                 }
 
                 a {
-                    @include linkHoverAnimation();
+                    @include headerLinkHoverAnimation();
 
                     .icon.envelope {
-                        @include linkHoverAnimation();
+                        @include headerLinkHoverAnimation();
                     }
 
                     color: white;
