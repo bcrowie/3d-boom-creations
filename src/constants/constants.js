@@ -3,6 +3,9 @@ export const headerPhone = "Phone: (863) 606-8318"
 export const headerEmail = "Email: contact@3dboom.org"
 export const logoAlt = "3D Boom Creations Logo"
 
+// Home
+export const homeImgAlt = "3D Printer Farm"
+
 // Links
 export const links = {
     about: {

@@ -1,8 +1,16 @@
-import "../../styles/Pages/Home.scss"
+import PrinterFarm from '../../assets/slides/printer-farm.jpg'
+import { homeImgAlt } from '../../constants/constants';
+import "../../styles/Pages/Home/Home.scss"
 
 const Home: React.FC = () => {
     return <div className='home'>
-        <p>This is the home page</p>
+        <div className="img-container">
+            <img src={PrinterFarm} alt={homeImgAlt} />
+        </div>
+        <div className="text-container">
+            <h1>This is home</h1>
+            <p>this is the home page</p>
+        </div>
     </div>;
 };
 

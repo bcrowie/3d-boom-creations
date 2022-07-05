@@ -1,6 +1,8 @@
 import React from 'react'
-import logo from '../../assets/Logo.png'
 import { Link } from "react-router-dom";
+import logo from '../../assets/Logo.png'
+
+
 import { logoAlt } from '../../constants/constants.js';
 import "../../styles/Components/Header/Header.scss"
 

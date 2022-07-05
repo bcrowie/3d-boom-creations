@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="footer-content footer-column-four">
                     <div className="copyright">
-                        <p>copyright 3DBoomCreations 2022</p>
+                        <p>Copyright 3DBoomCreations 2022</p>
                     </div>
                     <div className="social">
                         <Link to="#">Facebook</Link>

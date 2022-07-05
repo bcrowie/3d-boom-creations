@@ -14,45 +14,55 @@
 
     .footer-menu {
         @include container;
+
         a {
+            @include footerLinkHoverAnimation();
             color: white;
             text-decoration: none;
         }
+
         display: grid;
         grid-template-columns: 15% 15% 15% 55%;
+        padding: 20px 0 20px 0;
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+        }
 
         .footer-column-one {
-            display: flex;
-            flex-direction: column;
-            padding-top: 20px;
             grid-column-start: 1;
         }
+
         .footer-column-two {
-            display: flex;
-            flex-direction: column;
-            padding-top: 20px;
             grid-column-start: 2;
         }
+
         .footer-column-three {
-            display: flex;
-            flex-direction: column;
-            padding-top: 20px;
             grid-column-start: 3;
         }
+
         .footer-column-four {
             display: flex;
             flex-direction: column;
-            padding-top: 20px;
-            display: flex;
-            flex-direction: column;
+
             .copyright {
+                display: flex;
                 color: white;
-                justify-content: center;
+                justify-content: flex-end;
+                align-items: flex-end;
                 text-decoration: none;
             }
+
             .social {
+                display: flex;
+                align-items: flex-end;
                 a {
+                    display: flex;
+                    justify-self: flex-end;
+                    align-self: flex-end;
                     padding: 0 20px 0 0;
+
                 }
             }
         }
