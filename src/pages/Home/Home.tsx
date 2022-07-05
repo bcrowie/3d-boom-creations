@@ -1,5 +1,5 @@
 import PrinterFarm from '../../assets/slides/printer-farm.jpg'
-import { homeImgAlt } from '../../constants/constants';
+import { homeImgAlt, homeBulletPoints } from '../../constants/constants';
 import "../../styles/Pages/Home/Home.scss"
 
 const Home: React.FC = () => {
@@ -8,8 +8,14 @@ const Home: React.FC = () => {
             <img src={PrinterFarm} alt={homeImgAlt} />
         </div>
         <div className="text-container">
-            <h1>This is home</h1>
-            <p>this is the home page</p>
+            <h1>Professional, affordable and top quality 3D Printing!</h1>
+            <ul>
+                {homeBulletPoints.map(point => {
+                    return (
+                        <li>{point}</li>
+                    )
+                })}
+            </ul>
         </div>
     </div>;
 };

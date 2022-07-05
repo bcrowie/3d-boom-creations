@@ -5,6 +5,13 @@ export const logoAlt = "3D Boom Creations Logo"
 
 // Home
 export const homeImgAlt = "3D Printer Farm"
+export const homeBulletPoints = [
+    "Fast turnaround!",
+    "Top quality material!",
+    "All 3D Prints inspected for accuracy and quality!",
+    "Filament and Resin printing services!"
+]
+
 
 // Links
 export const links = {
