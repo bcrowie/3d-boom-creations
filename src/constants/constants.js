@@ -3,6 +3,20 @@ export const headerPhone = "Phone: (863) 606-8318"
 export const headerEmail = "Email: contact@3dboom.org"
 export const logoAlt = "3D Boom Creations Logo"
 
+// Contact
+export const contactHeader = "Contact Us"
+export const contactSummary = `If you have any questions, concerns, would like an update to your order or would
+                            just like to chat, please do not hesitate to contact us using the form below or by
+                            contacting us via the email address or phone number at the top of this page. We will
+                            contact you within 24-48 hours... but most of the time within only a couple of hours :)`
+export const inquirySelect = {
+    "pick-one": "Pick One",
+    "print-quote": "Looking to get something printed!",
+    "model-quote": "Looking to get something modeled!",
+    "general": "General Questions about Services.",
+    "customer-service": "Customer Support Inquiry"
+}
+
 // Home
 export const homeImgAlt = "3D Printer Farm"
 export const homeBulletPoints = [
@@ -11,7 +25,6 @@ export const homeBulletPoints = [
     "All 3D Prints inspected for accuracy and quality!",
     "Filament and Resin printing services!"
 ]
-
 
 // Links
 export const links = {

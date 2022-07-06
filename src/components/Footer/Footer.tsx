@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import FooterSocial from './FooterSocial';
 import * as constants from '../../constants/constants.js'
 import '../../styles/Components/Footer/Footer.scss';
 
@@ -29,11 +30,7 @@ const Footer: React.FC = () => {
                     <div className="copyright">
                         <p>Copyright 3DBoomCreations 2022</p>
                     </div>
-                    <div className="social">
-                        <Link to="#">Facebook</Link>
-                        <Link to="#">Twitter</Link>
-                        <Link to="#">Reddit</Link>
-                    </div>
+                    <FooterSocial />
                 </div>
             </div>
         </div>
