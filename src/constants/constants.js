@@ -10,6 +10,7 @@ export const contactSummary = `If you have any questions, concerns, would like a
                             contacting us via the email address or phone number at the top of this page. We will
                             contact you within 24-48 hours... but most of the time within only a couple of hours :)`
 export const contactCustomerSelect = {
+    "undefined": "",
     "no": "No",
     "yes": "Yes"
 }
@@ -54,7 +55,7 @@ export const contactInquirySelect = {
     "pick-one": "",
     "print-quote": "Looking to get something printed!",
     "model-quote": "Looking to get something modeled!",
-    "general": "General Questions about Services.",
+    "general": "General Questions about Services",
     "customer-service": "Customer Support Inquiry"
 }
 

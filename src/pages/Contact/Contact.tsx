@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import FormInput from "../../components/FormInput/FormInput";
 import FormSelector from "../../components/FormSelector/FormSelector";
 import { contactHeader,
@@ -46,6 +46,7 @@ const Contact: React.FC = () => {
 
     const onSubmit = (event: MouseEvent):void => {
         event.preventDefault()
+        // Send email with formdata to service@3dboom.org
     }
 
     return (
@@ -94,7 +95,10 @@ const Contact: React.FC = () => {
                                 {contactFormFields.contactMoreInfo.label}</label>
                             <textarea name={contactFormFields.contactMoreInfo.name}
                                 id={contactFormFields.contactMoreInfo.id}
-                                cols={25} rows={30}></textarea>
+                                cols={25} rows={30}
+                                onChange={e => {
+                                    setFormData({...formData, moreInfo: e.target.value})
+                                }}></textarea>
                         </div>
                     </div>
                     <button type="submit" onClick={(e) => onSubmit}>Submit</button>

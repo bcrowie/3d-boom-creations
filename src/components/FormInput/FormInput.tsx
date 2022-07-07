@@ -5,7 +5,7 @@ const Input: React.FC<InputPropsInterface> = (props) => {
     const {label, name, id} = props;
 
     return (
-        <div className={id}>
+        <div className={`input ${id}`}>
             <label htmlFor={id}>{label}</label>
             <input type="text" name={name} id={id} />
         </div>
