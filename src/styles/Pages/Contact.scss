@@ -28,16 +28,12 @@
         margin: auto;
         width: 800px;
 
-
         form {
             display: flex;
             flex-direction: column;
 
             .input-row {
                 display: flex;
-                flex-direction: row;
-                align-content: space-between;
-                height: 80px;
 
                 .selector {
                     select {
@@ -57,7 +53,7 @@
             input {
                 height: 40px;
                 padding: 5px;
-                width: 300px;
+                width: 90%;
             }
 
             button {
