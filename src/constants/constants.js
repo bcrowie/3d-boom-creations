@@ -95,3 +95,7 @@ export const links = {
         text: "Testimonials"
     },
 }
+
+// Quote
+export const quoteHeader = "Get a Quote!"
+export const quoteSummary = "Request a quote Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, dolores voluptatum ullam officiis quae ipsa fugiat accusamus iusto impedit velit voluptates quia? Optio asperiores, esse fugiat autem magni quos sunt consectetur distinctio! Quam repellendus tempore inventore excepturi. Tempora, numquam nisi!"

@@ -1,7 +1,16 @@
-import { InputPropsInterface } from "../../pages/Contact/Contact";
+import { Dispatch, SetStateAction } from "react";
+import { FormState } from "../../types"
 
 import "../../styles/Components/Input/Input.scss"
-const Input: React.FC<InputPropsInterface> = (props) => {
+
+export interface InputProps {
+    id: string
+    label: string,
+    name: string,
+    setData: Dispatch<SetStateAction<FormState>>;
+}
+
+const Input: React.FC<InputProps> = (props) => {
     const {label, name, id} = props;
 
     return (

@@ -1,12 +1,25 @@
+import { useState } from 'react';
+import FormInput from '../../components/FormInput/FormInput'
+import { quoteHeader, quoteSummary } from "../../constants/constants";
+
 import "../../styles/Pages/Quotes.scss"
 
 const Quotes: React.FC = () => {
+    const [formData, setFormData] = useState({})
+
     return (
         <div className="quotes">
            <div className="quote-summary">
-            <h1>Get a Quote!</h1>
-            <p>Request a quote Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, dolores voluptatum ullam officiis quae ipsa fugiat accusamus iusto impedit velit voluptates quia? Optio asperiores, esse fugiat autem magni quos sunt consectetur distinctio! Quam repellendus tempore inventore excepturi. Tempora, numquam nisi!</p>
+              <h1>{quoteHeader}</h1>
+              <p>{quoteSummary}</p>
            </div>
+            <div className="quote-form">
+                <form action="submit">
+                    <div className="input-row">
+                        <FormInput id="" label="" name="" setData={setFormData} />
+                    </div>
+                </form>
+            </div>
         </div>
     );
 };

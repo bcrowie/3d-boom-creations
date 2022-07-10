@@ -1,6 +1,7 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
 import FormInput from "../../components/FormInput/FormInput";
 import FormSelector from "../../components/FormSelector/FormSelector";
+import { FormState }from "../../types"
 import { contactHeader,
     contactSummary,
     contactCustomerSelect,
@@ -8,30 +9,7 @@ import { contactHeader,
     contactInquirySelect } from "../../constants/constants";
 import "../../styles/Pages/Contact.scss"
 
-type FormState = {
-    firstName: string,
-    lastName: string,
-    contactEmail: string,
-    contactPhone: string,
-    currentCustomer: false,
-    inquiryType: string,
-    moreInfo: string
-}
 
-export interface InputPropsInterface {
-    id: string
-    label: string,
-    name: string,
-    setData: Dispatch<SetStateAction<FormState>>;
-}
-
-export interface SelectorPropsInterface {
-    id: string,
-    label: string,
-    name: string,
-    options: object
-    setData: Dispatch<SetStateAction<FormState>>;
-}
 
 const Contact: React.FC = () => {
     const [formData, setFormData] = useState<FormState>({

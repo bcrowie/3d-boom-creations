@@ -1,6 +1,15 @@
-import { SelectorPropsInterface } from "../../pages/Contact/Contact"
+import { Dispatch, SetStateAction } from "react";
+import { FormState } from "../../types"
 
-const Selector: React.FC<SelectorPropsInterface> = (props) => {
+export interface SelectorProps {
+    id: string,
+    label: string,
+    name: string,
+    options: object
+    setData: Dispatch<SetStateAction<FormState>>;
+}
+
+const Selector: React.FC<SelectorProps> = (props) => {
     const {id, label, name, options} = props;
 
     return (
