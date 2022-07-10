@@ -1,7 +1,7 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
 import FormInput from "../../components/FormInput/FormInput";
 import FormSelector from "../../components/FormSelector/FormSelector";
-import { FormState }from "../../types"
+import { ContactForm, QuoteForm }from "../../types"
 import { contactHeader,
     contactSummary,
     contactCustomerSelect,
@@ -12,7 +12,7 @@ import "../../styles/Pages/Contact.scss"
 
 
 const Contact: React.FC = () => {
-    const [formData, setFormData] = useState<FormState>({
+    const [formData, setFormData] = useState<ContactForm | QuoteForm>({
         firstName: "",
         lastName: "",
         contactEmail: "",
@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
         moreInfo: ""
     })
 
-    const onSubmit = (event: MouseEvent):void => {
+    const submitRequest = (event: React.MouseEvent):void => {
         event.preventDefault()
         // Send email with formdata to service@3dboom.org
     }
@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
                                 }}></textarea>
                         </div>
                     </div>
-                    <button type="submit" onClick={(e) => onSubmit}>Submit</button>
+                    <button type="submit" onClick={(e) => submitRequest(e)}>Submit</button>
                 </form>
             </div>
         </div>

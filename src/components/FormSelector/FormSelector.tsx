@@ -1,13 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { FormState } from "../../types"
-
-export interface SelectorProps {
-    id: string,
-    label: string,
-    name: string,
-    options: object
-    setData: Dispatch<SetStateAction<FormState>>;
-}
+import { ContactForm, QuoteForm } from "../../types"
 
 const Selector: React.FC<SelectorProps> = (props) => {
     const {id, label, name, options} = props;
@@ -27,3 +19,11 @@ const Selector: React.FC<SelectorProps> = (props) => {
 }
 
 export default Selector
+
+export interface SelectorProps {
+    id: string,
+    label: string,
+    name: string,
+    options: object
+    setData: Dispatch<SetStateAction<ContactForm | QuoteForm>>;
+}

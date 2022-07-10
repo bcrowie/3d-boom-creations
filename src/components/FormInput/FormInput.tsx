@@ -1,14 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
-import { FormState } from "../../types"
+import { ContactForm, QuoteForm } from "../../types"
 
 import "../../styles/Components/Input/Input.scss"
-
-export interface InputProps {
-    id: string
-    label: string,
-    name: string,
-    setData: Dispatch<SetStateAction<FormState>>;
-}
 
 const Input: React.FC<InputProps> = (props) => {
     const {label, name, id} = props;
@@ -22,3 +15,10 @@ const Input: React.FC<InputProps> = (props) => {
 }
 
 export default Input
+
+export interface InputProps {
+    id: string
+    label: string,
+    name: string,
+    setData: Dispatch<SetStateAction<ContactForm | QuoteForm>>;
+}
