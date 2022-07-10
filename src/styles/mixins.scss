@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-@mixin button() {
+@mixin button($height, $width) {
     background-color: rgb(255, 145, 0);
-    color: white;
-    font-size: 1.2rem;
     border: none;
     border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    height: $height;
+    padding: 0.6rem;
+    width: $width;
 
     &:hover {
         color: rgb(255, 239, 7);

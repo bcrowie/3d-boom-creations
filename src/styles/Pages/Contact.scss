@@ -57,12 +57,10 @@
             }
 
             button {
-                @include button();
+                @include button(80px, 200px);
 
                 align-self: center;
-                width: 200px;
-                height: 40px;
-                margin-top: 180px;
+                margin-top: 2rem;
             }
 
             .input {
