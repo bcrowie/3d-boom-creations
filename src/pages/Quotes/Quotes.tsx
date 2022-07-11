@@ -16,7 +16,7 @@ const Quotes: React.FC = () => {
 
     const submitRequest = (e: React.MouseEvent):void => {
         e.preventDefault();
-        // Submit form data logic here
+        // Submit form data logic
     }
 
     return (
@@ -36,51 +36,60 @@ const Quotes: React.FC = () => {
                 <form action="submit">
                     <div className="input-row">
                         <FormInput id="first-name"
+                            data={formData}
                             label="First Name:"
-                            name="FirstName"
+                            name="FIRST_NAME"
                             setData={setFormData} />
                         <FormInput id="last-name"
+                            data={formData}
                             label="Last Name:"
-                            name="LastName"
+                            name="LAST_NAME"
                             setData={setFormData} />
                     </div>
                     <div className="input-row">
                         <FormInput id="contact-email"
+                            data={formData}
                             label="Contact Email:"
-                            name="ContactEmail"
+                            name="CONTACT_EMAIL"
                             setData={setFormData} />
                         <FormInput id="contact-phone"
+                            data={formData}
                             label="Contact Phone:"
-                            name="ContactPhone"
+                            name="CONTACT_PHONE"
                             setData={setFormData} />
                     </div>
                     <div className="input-row">
                         <FormInput id="model-url"
+                            data={formData}
                             label="Link to model:"
-                            name="LinkToModel"
+                            name="MODEL_URL"
                             setData={setFormData} />
                     </div>
                     <div className="input-row">
                         <Selector id="color"
+                            data={formData}
                             label="Color:"
-                            name="Color"
+                            name="COLOR"
                             options={QUOTE_SELECTORS.COLOR}
                             setData={setFormData} />
                         <Selector id="material"
+                            data={formData}
                             label="Material:"
-                            name="Material"
+                            name="MATERIAL"
                             options={QUOTE_SELECTORS.MATERIAL}
                             setData={setFormData} />
                     </div>
                     <div className="input-row">
                         <Selector id="priority"
+                            data={formData}
                             label="Priority:"
-                            name="Priority"
+                            name="PRIORITY"
                             options={QUOTE_SELECTORS.PRIORITY}
                             setData={setFormData} />
                         <FormInput id="size"
+                            data={formData}
                             label="Size: ( width x height x depth )"
-                            name="Size"
+                            name="SIZE"
                             setData={setFormData} />
                     </div>
                     <div className="more-info">

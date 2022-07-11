@@ -14,8 +14,8 @@ import "../../styles/Pages/Contact.scss"
 const Contact: React.FC = () => {
     const [formData, setFormData] = useState<ContactForm | QuoteForm>(CONTACT_INITIAL_STATE)
 
-    const submitRequest = (event: React.MouseEvent):void => {
-        event.preventDefault()
+    const submitRequest = (e: React.MouseEvent):void => {
+        e.preventDefault()
         // Send email with formdata to service@3dboom.org
     }
 
@@ -29,33 +29,39 @@ const Contact: React.FC = () => {
                 <form action="submit">
                     <div className="input-row">
                         <FormInput id="first-name"
+                            data={formData}
                             label="First Name:"
-                            name="FirstName"
+                            name="FIRST_NAME"
                             setData={setFormData}/>
                         <FormInput id="last-name"
+                            data={formData}
                             label="Last Name:"
-                            name="LastName"
+                            name="LAST_NAME"
                             setData={setFormData} />
                     </div>
                     <div className="input-row">
                         <FormInput id="email"
+                            data={formData}
                             label="Email Address:"
-                            name="EmailAddress"
+                            name="CONTACT_EMAIL"
                             setData={setFormData}/>
                         <FormInput id="phone-number"
+                            data={formData}
                             label="Phone Number (Optional):"
-                            name="PhoneNumber"
+                            name="CONTACT_PHONE"
                             setData={setFormData}/>
                     </div>
                     <div className="input-row">
                         <FormSelector id="current-customer"
+                            data={formData}
                             label="Are you a current customer?"
-                            name="CurrentCustomer"
+                            name="CURRENT_CUSTOMER"
                             options={CONTACT_CUSTOMER_SELECT}
                             setData={setFormData} />
                         <FormSelector id="inquiry-type"
+                            data={formData}
                             label="What is this inquiry related to?"
-                            name="InquiryType"
+                            name="INQUIRY_TYPE"
                             options={CONTACT_INQUIRY_SELECT}
                             setData={setFormData} />
                     </div>
@@ -67,7 +73,8 @@ const Contact: React.FC = () => {
                                 id="more-info"
                                 cols={25} rows={30}
                                 onChange={e => {
-                                    setFormData({...formData, MORE_INFO: e.target.value})
+                                    setFormData({...formData,
+                                        MORE_INFO: e.target.value})
                                 }}></textarea>
                         </div>
                     </div>

@@ -1,8 +1,3 @@
-// Header
-export const HEADER_PHONE = "Phone: (863) 606-8318"
-export const HEADER_EMAIL = "Email: contact@3dboom.org"
-export const LOGO_ALT = "3D Boom Creations Logo"
-
 // Contact
 export const CONTACT_HEADER = "Contact Us"
 export const CONTACT_SUMMARY = `If you have any questions, concerns, would like an update to your order or would
@@ -10,9 +5,9 @@ export const CONTACT_SUMMARY = `If you have any questions, concerns, would like 
                             contacting us via the email address or phone number at the top of this page. We will
                             contact you within 24-48 hours... but most of the time within only a couple of hours :)`
 export const CONTACT_CUSTOMER_SELECT = {
-    "undefined": "",
-    "no": "No",
-    "yes": "Yes"
+    BLANK: "",
+    NO: "No",
+    YES: "Yes"
 }
 export const CONTACT_INITIAL_STATE = {
     CONTACT_EMAIL: "",
@@ -24,12 +19,17 @@ export const CONTACT_INITIAL_STATE = {
     MORE_INFO: ""
 }
 export const CONTACT_INQUIRY_SELECT = {
-    "pick-one": "",
-    "print-quote": "Looking to get something printed!",
-    "model-quote": "Looking to get something modeled!",
-    "general": "General Questions about Services",
-    "customer-service": "Customer Support Inquiry"
+    PICK_ONE: "",
+    PRINT_QUOTE: "Looking to get something printed!",
+    MODEL_QUOTE: "Looking to get something modeled!",
+    GENERAL: "General Questions about Services",
+    CUSTOMER_SERVICE: "Customer Support Inquiry"
 }
+
+// Header
+export const HEADER_PHONE = "Phone: (863) 606-8318"
+export const HEADER_EMAIL = "Email: contact@3dboom.org"
+export const LOGO_ALT = "3D Boom Creations Logo"
 
 // Home
 export const HOME_IMG_ALT = "3D Printer Farm"
