@@ -9,9 +9,8 @@ import { QUOTE_HEADER,
     QUOTE_SUMMARY_ONE,
     QUOTE_SUMMARY_TWO,
     QUOTE_WEBSITE_LIST } from "../../constants/constants";
-
-import "../../styles/Pages/Quotes.scss"
 import Selector from '../../components/FormSelector/FormSelector';
+import "../../styles/Pages/Quotes.scss"
 
 const Quotes: React.FC = () => {
     const [formData, setFormData] = useState<ContactForm | QuoteForm>(QUOTE_INITIAL_STATE)

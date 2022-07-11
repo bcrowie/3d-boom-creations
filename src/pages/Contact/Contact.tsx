@@ -11,8 +11,6 @@ import { CONTACT_CUSTOMER_SELECT,
     CONTACT_SUMMARY } from "../../constants/constants";
 import "../../styles/Pages/Contact.scss"
 
-
-
 const Contact: React.FC = () => {
     const [formData, setFormData] = useState<ContactForm | QuoteForm>(CONTACT_INITIAL_STATE)
 
