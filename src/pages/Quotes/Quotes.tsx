@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com'
+import * as SECRETS from '../../secrets/secrets.js'
 import FormInput from '../../components/FormInput/FormInput'
 import { ContactForm, QuoteForm } from '../../types';
 import { QUOTE_HEADER,
@@ -14,9 +16,14 @@ import Selector from '../../components/FormSelector/FormSelector';
 const Quotes: React.FC = () => {
     const [formData, setFormData] = useState<ContactForm | QuoteForm>(QUOTE_INITIAL_STATE)
 
-    const submitRequest = (e: React.MouseEvent):void => {
+    const submitRequest = (e: React.FormEvent):void => {
         e.preventDefault();
-        // Submit form data logic
+        emailjs.send(SECRETS.emailJsServiceID,
+            SECRETS.emailJsQuoteTemplateID,
+            formData,
+            SECRETS.emailJsPublicKey)
+
+        // Then show modal
     }
 
     return (
@@ -33,7 +40,7 @@ const Quotes: React.FC = () => {
               </ul>
            </div>
             <div className="quote-form">
-                <form action="submit">
+                <form action="submit" >
                     <div className="input-row">
                         <FormInput id="first-name"
                             data={formData}
@@ -94,10 +101,17 @@ const Quotes: React.FC = () => {
                     </div>
                     <div className="more-info">
                         <label htmlFor="MoreInfo">More Info:</label>
-                        <textarea name="MoreInfo" id="more-info" cols={30} rows={10}></textarea>
+                        <textarea name="MORE_INFO"
+                            id="more-info"
+                            cols={30}
+                            rows={10}
+                            onChange={e => {
+                                setFormData({...formData,
+                                    MORE_INFO: e.target.value})
+                            }}></textarea>
                     </div>
+                    <button type="submit" onClick={e => submitRequest(e)}>Submit</button>
                 </form>
-                <button type="submit" onClick={e => submitRequest(e)}>Submit</button>
             </div>
         </div>
     );

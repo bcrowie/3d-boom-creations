@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import emailjs from 'emailjs-com'
+import * as SECRETS from '../../secrets/secrets.js'
 import FormInput from "../../components/FormInput/FormInput";
 import FormSelector from "../../components/FormSelector/FormSelector";
 import { ContactForm, QuoteForm }from "../../types"
@@ -16,7 +18,12 @@ const Contact: React.FC = () => {
 
     const submitRequest = (e: React.MouseEvent):void => {
         e.preventDefault()
-        // Send email with formdata to service@3dboom.org
+        emailjs.send(SECRETS.emailJsServiceID,
+            SECRETS.emailJsContactTemplateID,
+            formData,
+            SECRETS.emailJsPublicKey)
+
+        // Then show modal
     }
 
     return (
@@ -69,7 +76,7 @@ const Contact: React.FC = () => {
                         <div className="contact-more-info">
                             <label htmlFor="more-info">
                                 Provide more info here!</label>
-                            <textarea name="more-info"
+                            <textarea name="MORE_INFO"
                                 id="more-info"
                                 cols={25} rows={30}
                                 onChange={e => {
