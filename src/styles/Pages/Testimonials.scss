@@ -4,4 +4,5 @@
 .testimonials {
     @include container;
     @include main;
+    @include summary;
 }

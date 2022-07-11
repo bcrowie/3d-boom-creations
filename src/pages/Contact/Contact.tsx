@@ -1,26 +1,18 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { useState } from "react";
 import FormInput from "../../components/FormInput/FormInput";
 import FormSelector from "../../components/FormSelector/FormSelector";
 import { ContactForm, QuoteForm }from "../../types"
-import { contactHeader,
-    contactSummary,
-    contactCustomerSelect,
-    contactFormFields,
-    contactInquirySelect } from "../../constants/constants";
+import { CONTACT_CUSTOMER_SELECT,
+    CONTACT_HEADER,
+    CONTACT_INITIAL_STATE,
+    CONTACT_INQUIRY_SELECT,
+    CONTACT_SUMMARY } from "../../constants/constants";
 import "../../styles/Pages/Contact.scss"
 
 
 
 const Contact: React.FC = () => {
-    const [formData, setFormData] = useState<ContactForm | QuoteForm>({
-        firstName: "",
-        lastName: "",
-        contactEmail: "",
-        contactPhone: "",
-        currentCustomer: false,
-        inquiryType: "",
-        moreInfo: ""
-    })
+    const [formData, setFormData] = useState<ContactForm | QuoteForm>(CONTACT_INITIAL_STATE)
 
     const submitRequest = (event: React.MouseEvent):void => {
         event.preventDefault()
@@ -29,53 +21,53 @@ const Contact: React.FC = () => {
 
     return (
         <div className="contact">
-            <div className="contact-summary">
-                <h1>{contactHeader}</h1>
-                <p>{contactSummary}</p>
+            <div className="summary">
+                <h1>{CONTACT_HEADER}</h1>
+                <p>{CONTACT_SUMMARY}</p>
             </div>
             <div className="contact-form">
                 <form action="submit">
                     <div className="input-row">
-                        <FormInput id={contactFormFields.firstName.id}
-                            label={contactFormFields.firstName.label}
-                            name={contactFormFields.firstName.name}
+                        <FormInput id="first-name"
+                            label="First Name:"
+                            name="FirstName"
                             setData={setFormData}/>
-                        <FormInput id={contactFormFields.lastName.id}
-                            label={contactFormFields.lastName.label}
-                            name={contactFormFields.lastName.name}
+                        <FormInput id="last-name"
+                            label="Last Name:"
+                            name="LastName"
                             setData={setFormData} />
                     </div>
                     <div className="input-row">
-                        <FormInput id={contactFormFields.contactEmail.id}
-                            label={contactFormFields.contactEmail.label}
-                            name={contactFormFields.contactEmail.name}
+                        <FormInput id="email"
+                            label="Email Address:"
+                            name="EmailAddress"
                             setData={setFormData}/>
-                        <FormInput id={contactFormFields.phoneNumber.id}
-                            label={contactFormFields.phoneNumber.label}
-                            name={contactFormFields.phoneNumber.name}
+                        <FormInput id="phone-number"
+                            label="Phone Number (Optional):"
+                            name="PhoneNumber"
                             setData={setFormData}/>
                     </div>
                     <div className="input-row">
-                        <FormSelector id={contactFormFields.currentCustomer.id}
-                            label={contactFormFields.currentCustomer.label}
-                            name={contactFormFields.currentCustomer.name}
-                            options={contactCustomerSelect}
+                        <FormSelector id="current-customer"
+                            label="Are you a current customer?"
+                            name="CurrentCustomer"
+                            options={CONTACT_CUSTOMER_SELECT}
                             setData={setFormData} />
-                        <FormSelector id={contactFormFields.inquiryType.id}
-                            label={contactFormFields.inquiryType.label}
-                            name={contactFormFields.inquiryType.name}
-                            options={contactInquirySelect}
+                        <FormSelector id="inquiry-type"
+                            label="What is this inquiry related to?"
+                            name="InquiryType"
+                            options={CONTACT_INQUIRY_SELECT}
                             setData={setFormData} />
                     </div>
                     <div className="input-row">
-                        <div className={contactFormFields.contactMoreInfo.id}>
-                            <label htmlFor={contactFormFields.contactMoreInfo.id}>
-                                {contactFormFields.contactMoreInfo.label}</label>
-                            <textarea name={contactFormFields.contactMoreInfo.name}
-                                id={contactFormFields.contactMoreInfo.id}
+                        <div className="contact-more-info">
+                            <label htmlFor="more-info">
+                                Provide more info here!</label>
+                            <textarea name="more-info"
+                                id="more-info"
                                 cols={25} rows={30}
                                 onChange={e => {
-                                    setFormData({...formData, moreInfo: e.target.value})
+                                    setFormData({...formData, MORE_INFO: e.target.value})
                                 }}></textarea>
                         </div>
                     </div>

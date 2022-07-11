@@ -9,8 +9,8 @@ const Selector: React.FC<SelectorProps> = (props) => {
             <div className={id}>
                 <label htmlFor={id}>{label}</label>
                 <select name={name} id={id}>
-                    {Object.entries(options).map(([key, val]) => (
-                        <option value={key}>{val}</option>
+                    {Object.entries(options).map(([val, title]) => (
+                        <option value={val}>{title}</option>
                     ))}
                 </select>
             </div>

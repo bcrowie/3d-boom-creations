@@ -1,18 +1,27 @@
 type Form = {
-    firstName: string,
-    lastName: string,
-    contactEmail: string,
-    contactPhone: string,
-    moreInfo: string
+    CONTACT_EMAIL: string,
+    CONTACT_PHONE: string,
+    FIRST_NAME: string,
+    LAST_NAME: string,
+    MORE_INFO: string
 }
 
 export type ContactForm = Form & {
-    currentCustomer: false,
-    inquiryType: string,
+    CURRENT_CUSTOMER: boolean,
+    INQUIRY_TYPE: string,
 }
 
 export type QuoteForm = Form & {
-    material: string,
-    color: string,
-    size: string,
+    COLOR: string,
+    MATERIAL: string,
+    MODEL_URL: string,
+    PRIORITY: string,
+    SIZE: string,
+}
+
+export type Product = {
+    DEFAULT_COLOR: string,
+    DESCRIPTION: string,
+    NAME: string,
+    PRICE: number,
 }

@@ -4,24 +4,7 @@
 .contact {
     @include container;
     @include main;
-
-    display: flex;
-    flex-direction: column;
-    padding: 5rem 0;
-
-    .contact-summary {
-        height: 200px;
-
-        h1 {
-            height: 60px;
-            border-bottom: 3px rgb(249, 49, 49) solid;
-        }
-
-        p {
-            height: 60px;
-            padding: 20px 0;
-        }
-    }
+    @include summary;
 
     .contact-form {
         display: flex;

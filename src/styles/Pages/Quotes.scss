@@ -4,22 +4,104 @@
 .quotes {
     @include container;
     @include main;
+    @include summary;
 
-    display: flex;
-    flex-direction: column;
-    padding: 5rem 0;
+    height: auto;
 
-    .quote-summary {
-        height: 200px;
+    p {
+        height: auto;
+    }
+    ul {
+        height: auto;
+        margin-top: 60px;
 
-        h1 {
-            height: 60px;
-            border-bottom: 3px rgb(249, 49, 49) solid;
+        li {
+            height: 40px;
+
+            a {
+                color:rgb(249, 49, 49);
+                font-weight: bold;
+                text-decoration: none;
+
+                &:hover {
+                    color: rgb(255, 239, 7);
+                    transition: all 200ms ease-in-out;
+                    text-shadow:
+                    3px 3px 0 #000,
+                    -1px -1px 0 #000,
+                    1px -1px 0 #000,
+                    -1px 1px 0 #000,
+                    1px 1px 0 #000;
+                }
+            }
+        }
+    }
+
+    .quote-form {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 800px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 200px;
+            .input-row {
+                display: flex;
+
+                label {
+                    height: 20px;
+                    margin: 5px 0;
+                }
+                .selector {
+                    select {
+                        height: 40px;
+                        width: 300px;
+                    }
+                }
+
+                .quote-more-info {
+                    textarea {
+                        height: 200px;
+                    }
+                }
+
+                #model-url {
+                    width: 95%;
+                }
+
+                .more-info {
+                    display: flex;
+                    textarea {
+                        height: 400px;
+                        width: 100px;
+                    }
+                }
+            }
+
+            input {
+                height: 40px;
+                padding: 5px;
+                width: 90%;
+            }
+            label {
+                height: 20px;
+            }
+
+
+
+            .input {
+                display: flex;
+                flex-direction: column;
+            }
         }
 
-        p {
-            height: 60px;
-            padding: 20px 0;
+        button {
+            @include button(40px, 200px);
+
+            align-self: center;
+            margin-top: 2rem;
         }
     }
 }
