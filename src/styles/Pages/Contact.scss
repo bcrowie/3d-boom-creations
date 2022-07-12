@@ -4,4 +4,64 @@
 .contact {
     @include container;
     @include main;
+    @include summary;
+
+    .contact-form {
+        display: flex;
+        margin: auto;
+        width: 800px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            .input-row {
+                display: flex;
+
+                .selector {
+                    select {
+                        height: 40px;
+                        width: 300px;
+                    }
+                }
+
+                .contact-more-info {
+                    textarea {
+                        height: 200px;
+                    }
+                }
+
+            }
+
+            input {
+                height: 40px;
+                padding: 5px;
+                width: 90%;
+            }
+
+            button {
+                @include button(80px, 200px);
+
+                align-self: center;
+                margin-top: 2rem;
+            }
+
+            .input {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    height: 20px;
+                }
+
+                .contact-more-info {
+                    textarea {
+                        height: 400px;
+                        width: 100px;
+                    }
+                }
+
+            }
+        }
+    }
 }

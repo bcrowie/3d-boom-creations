@@ -4,4 +4,87 @@
 .quotes {
     @include container;
     @include main;
+    @include summary;
+
+    height: auto;
+
+    p {
+        height: auto;
+    }
+
+    ul {
+        height: auto;
+        margin-top: 60px;
+
+        li {
+            height: 40px;
+
+            a {
+                color:rgb(249, 49, 49);
+                font-weight: bold;
+                text-decoration: none;
+
+                &:hover {
+                    @include headerLinkHoverAnimation();
+                }
+            }
+        }
+    }
+
+    .quote-form {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 800px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 200px;
+
+            .input-row {
+                display: flex;
+                justify-content: space-between;
+
+                label {
+                    height: 20px;
+                    margin: 5px 0;
+                }
+                .selector {
+                    select {
+                        height: 40px;
+                        width: 300px;
+                    }
+                }
+
+                #model-url {
+                    width: 95%;
+                }
+
+                .input, .selector {
+                    @include input();
+                }
+            }
+
+            label {
+                height: 20px;
+            }
+        }
+        .more-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            textarea {
+                @include input();
+                width: 95%;
+            }
+        }
+        button {
+            @include button(40px, 200px);
+
+            align-self: center;
+            margin-top: 2rem;
+        }
+    }
 }

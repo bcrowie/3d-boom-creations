@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
+@mixin button($height, $width) {
+    background-color: rgb(48, 235, 31);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    height: $height;
+    padding: 0.6rem;
+    width: $width;
+
+    &:hover {
+        color: rgb(255, 239, 7);
+        background-color: rgb(16, 179, 30);
+        transition: all 200ms ease-in-out;
+        cursor: pointer;
+    }
+}
+
 @mixin container() {
     width: 1100px;
     margin: auto;
@@ -10,6 +28,12 @@
     font-size: $size;
 }
 
+@mixin footerLinkHoverAnimation() {
+    &:hover {
+        color: rgb(255, 239, 7);
+        transition: all 200ms ease-in-out;
+    }
+}
 @mixin headerLink() {
     @include font-style(1.5rem);
     @include headerLinkHoverAnimation();
@@ -31,13 +55,49 @@
     }
 }
 
-@mixin footerLinkHoverAnimation() {
-    &:hover {
-        color: rgb(255, 239, 7);
-        transition: all 200ms ease-in-out;
+@mixin input() {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    input, select {
+        border: rgb(163, 163, 163) 1px solid;
+        border-radius: 5px;
+        margin: 10px 0;
+        padding: 15px;
+        width: 90%;
+
+        &:hover {
+            border: rgb(44, 44, 44) 1px solid;
+            transition: all 200ms ease-in-out;
+        }
+    }
+
+    select {
+        padding: 22px;
     }
 }
 
 @mixin main() {
     padding-top: 10px;
+}
+
+@mixin summary() {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0;
+
+    .summary {
+        height: 200px;
+
+        h1 {
+            height: 60px;
+            border-bottom: 3px rgb(249, 49, 49) solid;
+        }
+
+        p {
+            height: 60px;
+            padding: 20px 0;
+        }
+    }
 }

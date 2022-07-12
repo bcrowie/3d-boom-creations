@@ -2,14 +2,11 @@
 @import '../../mixins.scss';
 
 .home {
-    // @include container;
-    // @include main;
-
     .img-container {
         position: absolute;
-        // top: 100px;
-        // left: 0;
+        width: 100%;
         z-index: -1;
+
         img {
             filter: brightness(50%)
         }
@@ -33,7 +30,6 @@
 
             li {
                 font-size: 1.5rem;
-                // height: 90px;
             }
         }
     }
