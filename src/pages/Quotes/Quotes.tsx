@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com'
-import * as SECRETS from '../../secrets/secrets.js'
+import * as SECRETS from '../../secrets/secrets'
 import FormInput from '../../components/FormInput/FormInput'
 import { ContactForm, QuoteForm } from '../../types';
 import { QUOTE_HEADER,
