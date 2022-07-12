@@ -25,14 +25,7 @@
                 text-decoration: none;
 
                 &:hover {
-                    color: rgb(255, 239, 7);
-                    transition: all 200ms ease-in-out;
-                    text-shadow:
-                    3px 3px 0 #000,
-                    -1px -1px 0 #000,
-                    1px -1px 0 #000,
-                    -1px 1px 0 #000,
-                    1px 1px 0 #000;
+                    @include headerLinkHoverAnimation();
                 }
             }
         }
@@ -47,9 +40,12 @@
         form {
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             margin-top: 200px;
+
             .input-row {
                 display: flex;
+                justify-content: space-between;
 
                 label {
                     height: 20px;
@@ -62,40 +58,28 @@
                     }
                 }
 
-                .quote-more-info {
-                    textarea {
-                        height: 200px;
-                    }
-                }
-
                 #model-url {
                     width: 95%;
                 }
 
-                .more-info {
-                    display: flex;
-                    textarea {
-                        height: 400px;
-                        width: 100px;
-                    }
+                .input, .selector {
+                    @include input();
                 }
             }
 
-            input {
-                height: 40px;
-                padding: 5px;
-                width: 90%;
-            }
             label {
                 height: 20px;
             }
-
-            .input {
-                display: flex;
-                flex-direction: column;
+        }
+        .more-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            textarea {
+                @include input();
+                width: 95%;
             }
         }
-
         button {
             @include button(40px, 200px);
 

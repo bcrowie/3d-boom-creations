@@ -17,14 +17,12 @@ const Selector: React.FC<SelectorProps> = (props) => {
 
     return (
         <div className="selector">
-            <div className={id}>
-                <label htmlFor={id}>{label}</label>
-                <select name={name} id={id} onChange={handleChange}>
-                    {Object.entries(options).map(([val, title]) => (
-                        <option key={title} value={val}>{title}</option>
-                    ))}
-                </select>
-            </div>
+            <label htmlFor={id}>{label}</label>
+            <select name={name} id={id} onChange={handleChange}>
+                {Object.entries(options).map(([val, title]) => (
+                    <option key={title} value={val}>{title}</option>
+                ))}
+            </select>
         </div>
     )
 }
