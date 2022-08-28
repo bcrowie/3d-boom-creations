@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 @mixin button($height, $width) {
-    background-color: rgb(48, 235, 31);
+    background-color: rgb(11, 194, 27);
     border: none;
     border-radius: 5px;
     color: white;
@@ -12,7 +12,7 @@
 
     &:hover {
         color: rgb(255, 239, 7);
-        background-color: rgb(16, 179, 30);
+        // background-color: rgb(16, 179, 30);
         transition: all 200ms ease-in-out;
         cursor: pointer;
     }

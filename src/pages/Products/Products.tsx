@@ -5,6 +5,7 @@ const Products = () => {
         <div className="products">
             <div className="summary">
                 <h1>Products</h1>
+                <h2>Coming soon!</h2>
             </div>
         </div>
     )

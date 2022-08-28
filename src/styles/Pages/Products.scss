@@ -5,4 +5,9 @@
     @include container;
     @include main;
     @include summary;
+
+    h2 {
+        text-align: center;
+        padding: 2rem 0;
+    }
 }

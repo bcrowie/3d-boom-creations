@@ -16,7 +16,7 @@ export type QuoteForm = Form & {
     MATERIAL: string,
     MODEL_URL: string,
     PRIORITY: string,
-    SIZE: string,
+    QUANTITY: string,
 }
 
 export type Product = {
