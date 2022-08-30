@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import emailjs from 'emailjs-com'
 import * as SECRETS from '../../secrets/secrets'
 import FormInput from '../../components/FormInput/FormInput'
@@ -9,11 +10,12 @@ import { QUOTE_HEADER,
     QUOTE_SUMMARY_ONE,
     QUOTE_SUMMARY_TWO,
     QUOTE_WEBSITE_LIST } from "../../constants/constants";
-import Selector from '../../components/FormSelector/FormSelector';
+import FormSelector from '../../components/FormSelector/FormSelector';
 import "../../styles/Pages/Quotes.scss"
 
 const Quotes: React.FC = () => {
     const [formData, setFormData] = useState<ContactForm | QuoteForm>(QUOTE_INITIAL_STATE)
+    const navigate = useNavigate()
 
     const submitRequest = (e: React.FormEvent):void => {
         e.preventDefault();
@@ -21,8 +23,7 @@ const Quotes: React.FC = () => {
             SECRETS.emailJsQuoteTemplateID,
             formData,
             SECRETS.emailJsPublicKey)
-
-        // Then show modal
+        navigate("/confirmed")
     }
 
     return (
@@ -72,13 +73,13 @@ const Quotes: React.FC = () => {
                             setData={setFormData} />
                     </div>
                     <div className="input-row">
-                        <Selector id="color"
+                        <FormSelector id="color"
                             data={formData}
                             label="Color:"
                             name="COLOR"
                             options={QUOTE_SELECTORS.COLOR}
                             setData={setFormData} />
-                        <Selector id="material"
+                        <FormSelector id="material"
                             data={formData}
                             label="Material:"
                             name="MATERIAL"
@@ -86,7 +87,7 @@ const Quotes: React.FC = () => {
                             setData={setFormData} />
                     </div>
                     <div className="input-row">
-                        <Selector id="priority"
+                        <FormSelector id="priority"
                             data={formData}
                             label="Priority:"
                             name="PRIORITY"

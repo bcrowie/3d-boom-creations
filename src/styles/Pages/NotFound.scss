@@ -1,0 +1,8 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.not-found {
+    @include container;
+    @include main;
+    @include summary;
+}

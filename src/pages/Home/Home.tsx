@@ -1,4 +1,4 @@
-import PrinterFarm from '../../assets/slides/printer-farm.jpg'
+import PrinterFarm from '../../assets/slides/printer-farm-min.jpg'
 import { HOME_IMG_ALT, HOME_BULLET_POINTS } from '../../constants/constants';
 import "../../styles/Pages/Home/Home.scss"
 

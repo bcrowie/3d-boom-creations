@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import emailjs from 'emailjs-com'
 import * as SECRETS from '../../secrets/secrets'
 import FormInput from "../../components/FormInput/FormInput";
@@ -13,6 +14,7 @@ import "../../styles/Pages/Contact.scss"
 
 const Contact: React.FC = () => {
     const [formData, setFormData] = useState<ContactForm | QuoteForm>(CONTACT_INITIAL_STATE)
+    const navigate = useNavigate();
 
     const submitRequest = (e: React.MouseEvent):void => {
         e.preventDefault()
@@ -20,8 +22,7 @@ const Contact: React.FC = () => {
             SECRETS.emailJsContactTemplateID,
             formData,
             SECRETS.emailJsPublicKey)
-
-        // Then show modal
+        navigate("/confirmed")
     }
 
     return (
