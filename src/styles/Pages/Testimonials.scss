@@ -5,4 +5,40 @@
     @include container;
     @include main;
     @include summary;
+    height: 1850px;
+
+    ul{
+        padding-right: 30px;
+        margin: 0;
+        li:nth-child(3n+1) {
+            font-weight: bold;
+            padding: 1rem 0 0 0;
+            height: auto;
+            width: auto;
+            list-style-type: none;
+        }
+        li:nth-child(3n+2){
+            font-size: 0.75rem;
+            padding: 1rem 0;
+            height: auto;
+            list-style-type: none;
+        }
+        li:nth-child(3n+3){
+            padding: 1rem 0;
+            margin: 0;
+            list-style-type: none;
+            height: auto;
+            width: auto;
+            border-bottom: 1px grey solid;
+        }
+        li:nth-child(4), li:nth-child(5),
+        li:nth-child(6), li:nth-child(10),
+        li:nth-child(11), li:nth-child(12),
+        li:nth-child(16), li:nth-child(17),
+        li:nth-child(18), li:nth-child(22),
+        li:nth-child(23), li:nth-child(24){
+            text-align: right;
+        }
+
+    }
 }

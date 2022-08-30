@@ -60,7 +60,7 @@ const Quotes: React.FC = () => {
                             setData={setFormData} />
                         <FormInput id="contact-phone"
                             data={formData}
-                            label="Contact Phone:"
+                            label="Contact Phone: (Optional)"
                             name="CONTACT_PHONE"
                             setData={setFormData} />
                     </div>
@@ -92,10 +92,10 @@ const Quotes: React.FC = () => {
                             name="PRIORITY"
                             options={QUOTE_SELECTORS.PRIORITY}
                             setData={setFormData} />
-                        <FormInput id="size"
+                        <FormInput id="quantity"
                             data={formData}
-                            label="Size: ( width x height x depth )"
-                            name="SIZE"
+                            label="Quantity:"
+                            name="QUANTITY"
                             setData={setFormData} />
                     </div>
                     <div className="more-info">
