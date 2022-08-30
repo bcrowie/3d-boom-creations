@@ -9,30 +9,19 @@ const Footer: React.FC = () => {
             <div className="footer-menu">
                 <div className="footer-content footer-column-one">
                     <Link to={LINKS.HOME.LINK}>{LINKS.HOME.TEXT}</Link>
-                    <Link to={LINKS.HOME.LINK}>{LINKS.HOME.TEXT}</Link>
-                    <Link to={LINKS.HOME.LINK}>{LINKS.HOME.TEXT}</Link>
-                    <Link to={LINKS.HOME.LINK}>{LINKS.HOME.TEXT}</Link>
-                </div>
-                <div className="footer-content footer-column-two">
-                    <Link to={LINKS.HOME.LINK}>{LINKS.HOME.TEXT}</Link>
-                    <Link to={LINKS.HOME.LINK}>{LINKS.HOME.TEXT}</Link>
-                    <Link to={LINKS.HOME.LINK}>{LINKS.HOME.TEXT}</Link>
-                    <Link to={LINKS.HOME.LINK}>{LINKS.HOME.TEXT}</Link>
-                </div>
-                <div className="footer-content footer-column-three">
-                    <Link to={LINKS.HOME.LINK}>{LINKS.HOME.TEXT}</Link>
-                    <Link to={LINKS.HOME.LINK}>{LINKS.HOME.TEXT}</Link>
-                    <Link to={LINKS.HOME.LINK}>{LINKS.HOME.TEXT}</Link>
-                    <Link to={LINKS.HOME.LINK}>{LINKS.HOME.TEXT}</Link>
+                    <Link to={LINKS.QUOTES.LINK}>{LINKS.QUOTES.TEXT}</Link>
+                    <Link to={LINKS.TESTIMONIALS.LINK}>{LINKS.TESTIMONIALS.TEXT}</Link>
+                    <Link to={LINKS.CONTACT.LINK}>{LINKS.CONTACT.TEXT}</Link>
                 </div>
                 <div className="footer-content footer-column-four">
                     <div className="copyright">
-                        <p>Copyright 3DBoomCreations 2022</p>
+                        <p>© 2022 3DBoomCreations</p>
                     </div>
                     <div className="social">
-                        <Link to="#">Facebook</Link>
                         <Link to="#">Twitter</Link>
-                        <Link to="#">Reddit</Link>
+                        <Link to="#">Instagram</Link>
+                        <a href="https://www.facebook.com/profile.php?id=100085335301174" target="_blank">Facebook</a>
+                        <a href="https://www.reddit.com/user/cr0wstuf" target="_blank">Reddit</a>
                     </div>
                 </div>
             </div>

@@ -27,6 +27,7 @@
         .footer-content {
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             padding-top: 20px;
         }
 
@@ -34,13 +35,6 @@
             grid-column-start: 1;
         }
 
-        .footer-column-two {
-            grid-column-start: 2;
-        }
-
-        .footer-column-three {
-            grid-column-start: 3;
-        }
 
         .footer-column-four {
             display: flex;

@@ -1,0 +1,15 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.message-sent {
+    @include container;
+    @include main;
+    @include summary;
+
+    button {
+        @include button(40px, 200px);
+        display: flex;
+        margin: auto;
+        text-align: center;
+    }
+}
